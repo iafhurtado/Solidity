@@ -5,7 +5,7 @@ require("@nomiclabs/hardhat-etherscan");
 task("deploy-mainnet", "Deploys contract on a provided network")
     .addParam("privateKey", " Please provide the private key")
     .setAction(async ({privateKey}) => {
-        const deployElectionContract = require("./scripts/deploy-with-param");
+        const deployElectionContract = require("./scripts/deploy-with-params");
         await deployElectionContract(privateKey);
     });
 
@@ -37,6 +37,7 @@ module.exports = {
   networks: {
     ropsten: {
       url: "https://ropsten.infura.io/v3/40c2813049e44ec79cb4d7e0d18de173",
+      accounts: ['b68ec1918def8fca4b1da06a4f34c3f459bad83c063d2162afd488215c27f065']
     }
   },
 	
