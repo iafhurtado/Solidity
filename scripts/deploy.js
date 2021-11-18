@@ -23,6 +23,5 @@ async function deployElectionContract() {
         ],
       });
 }
-}
   
 module.exports = deployElectionContract;
